@@ -40,7 +40,7 @@ void setup(void) {
   config.bus_length = 1;
   config.sample = 75;
   FD.setRegions(64);
-  FD.setBaudRate(config, 1, 1);
+  FD.setBaudRateAdvanced(config, 1, 1);
   FD.onReceive(canSniff);
   FD.setMBFilter(ACCEPT_ALL);
   FD.setMBFilter(MB13, 0x1);
